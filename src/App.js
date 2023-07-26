@@ -9,6 +9,7 @@ import DevicePage from './pages/DevicePage';
 import Admin from './pages/Admin';
 import Basket from './pages/Basket';
 import { Context } from '.';
+import { NavBar } from './components/NavBar';
 
 function App() {
   const { user } = useContext(Context);
@@ -16,6 +17,7 @@ function App() {
   console.log(user);
   return (
     <>
+      <NavBar />
       <Routes>
         <Route path="/" element={<Shop />} />
         <Route path="/device/:id" element={<DevicePage />} />
